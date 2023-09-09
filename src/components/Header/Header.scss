@@ -1,0 +1,148 @@
+@import "../../css-config/mixins.scss";
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    color:white
+}
+.Nav p{
+    margin: 0;
+    margin-left:5px;
+}
+.Nav{
+  display:  flex;  
+  width: 100vw;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  align-items: center;
+  svg{
+    cursor: pointer;
+    color: #e77021;
+  }
+}
+.Nav img {
+    width:15vw;
+    cursor: pointer;
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    right: -2vw;
+}
+.login{
+    display: flex;
+    align-items: center;
+    margin-right: 2.7vw;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    margin-right:2.7vw;
+    span{
+        position: relative;
+        line-height: 1;
+        border-radius: 50%;
+        background-color: #e77021;
+        padding: 1.5px 5.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -11px;
+        right: 7px;
+    }
+}
+.wish{
+    display: flex;
+    align-items: center;
+    margin-right: 2.7vw;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    left: 5.5vw;
+}
+.search input{
+ border: 2px solid rgba(197, 197, 197, 0.337);
+ padding: 1.2vh 10vw;
+ outline: none;
+ border-radius: 50px;
+ margin-right: 1vw;
+}
+.search input:focus{
+    border: 2px solid #e77021;
+    transition: all 150ms ease-in;
+}
+.search input::placeholder{
+    position: relative;
+    left:12px;
+}
+.searchIcon{
+    color: #e77021;
+    transition: all 250ms ease-in-out;
+    position: relative;
+    right:5vw;
+}
+.searchIcon :hover{
+    border-radius: 2px;
+    color: #e77021;
+    transition: all 250ms ease-in-out;
+}
+.loginIcon{
+    color: red;
+}
+.Nav p{
+    cursor: pointer;
+}
+.Nav p:hover{
+  color: #e77021;
+  transition: all 250ms ease-in-out;
+}
+@media (max-width:835px){
+ .Nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+ }
+ .nav2{
+    gap: 10vw;
+    font-size: 0;
+    .cart{
+        span{
+            font-size:20px; 
+        }
+    }
+ }
+ .search{
+    order: 1;
+    margin: 0;
+    // display: flex;
+    // justify-content: center;
+ }
+ .search input{
+    position: relative;
+    padding:1.5vh 0vw;
+    right: 1.65vw;
+    margin: 0;
+    // margin-right: 4.5vw;
+ }
+ .search text-area{
+    width: 0;
+ }
+ .search input::placeholder{
+    font-size: 0;
+ }
+ .Nav img{
+    width: 50vw;
+ }
+ .searchIcon{
+    right:16vw;
+ }
+
+}
