@@ -1,1 +1,169 @@
 @import "../../css-config/mixins.scss";
+
+.layout {
+    animation: Nav-sticky 0.2s ease-in-out forwards;
+    max-width: calc(100% - 20px);
+    @include md{
+        max-width: 1200px;
+    }
+    margin: 0 auto;
+    height: 2000px;
+    .top {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        @include md{
+            flex-direction: row;
+        }
+        justify-content: center;
+        gap: 20px;
+        .left {
+            max-width: calc(100% - 20px);
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .right {
+            position: relative;
+            overflow: hidden;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            // align-items: center;
+            @include md{
+                max-width: calc(50% - 20px);
+            }
+
+            .title {
+                // max-width: 100%;
+                font-size: 30px;
+                @include md{
+                    font-size: 50px;
+                }
+                color:white ;
+                font-weight: bolder;
+            }
+            .details{
+                color:rgba(255, 255, 255, 0.64);
+                text-wrap: wrap;
+            }
+
+            .price {
+                display: flex;
+                align-items: center;
+
+                .L-Rate {
+                    border: 1px solid black;
+                    padding: 2px 6px;
+                    background-color: #e77021;
+                    margin-right: 20px;
+                    height: fit-content;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+
+                .rupee {
+                    font-size: 40px;
+                    color:rgba(255, 255, 255, 0.64);
+                }
+            }
+
+            .buttons {
+                // flex-wrap: wrap;
+                position: relative;
+                background-color: rgba(255, 255, 255, 0);
+                // left: 1vw;
+                padding: 1px;
+                margin: 0 auto;
+                @include md{
+                    margin: 0;
+                }
+                display: flex;
+                justify-content: center;
+                gap: 9vw;
+                @include md{
+                    justify-content:left;
+                    gap: 2vw;
+                }
+                font-size: 20px;
+                .count-button {
+                    display: flex;
+                    align-items: center;
+
+                    .changeBtn {
+                        padding: 2px 15px;
+                        border: 1px solid white;
+                    }
+
+                    span {
+                        padding: 2px 20px;
+                        border: 1px solid white;
+                    }
+                }
+
+                .a2c-button {
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid white;
+                    padding: 2px 15px;
+                    gap: 10px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+            }
+        }
+    }
+}
+.share-buttons{
+    display: flex;
+   svg{
+    fill: #e77021;
+   }
+   span{
+    font-weight: bolder;
+   }
+   gap: 5px;
+   .icon{
+    display: flex;
+    gap: 10px;
+    @include md{
+        gap: 15px;
+    }
+    cursor: pointer;
+   }
+}
+.category{
+    display: flex;
+    gap: 5px;
+    span{
+        font-weight: bolder;
+            }
+    p{
+        margin: 0;
+        color: rgba(255, 255, 255, 0.64);
+    }
+}
+.divider-line{
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: #e770218d;
+    margin-bottom: 10px;
+}
+
+@keyframes Nav-sticky {
+    0% {
+        transform: translateY(-88px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
